@@ -12,7 +12,12 @@ const forecast = (latitude, longitude, callback) => {
             callback('ko tim thay thoi tiet tai dia diem', undefined)
         } 
         else {
-            callback(undefined, body.current.weather_descriptions + ". It is currently " + body.current.temperature + " degress out." + " Feel like " + body.current.feelslike + " degress out." + " And the win speed is " + body.current.wind_speed +" km/h")
+            callback(
+                undefined, body.current.weather_descriptions 
+            + ". It is currently " + body.current.temperature + " degress out." 
+            + " Feel like " + body.current.feelslike + " degress out." 
+            + " And the win speed is " + body.current.wind_speed +" km/h"
+            )
         }
 
     })
